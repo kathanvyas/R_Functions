@@ -113,20 +113,7 @@ INTO TABLE t
    FIELDS TERMINATED BY ':'   		-- Specifies the column-ending sequence (for example, each column in a CSV file is separated by ','
    LINES TERMINATED BY '\n'		-- Specifies the line-ending sequence and the column order to load
    IGNORE 1 LINES                       -- If your file has a header, this command will ignore it
-   (c2, c1, c3);			-- Reorder columns in the file to match the column order in the table
- 
--- To make queries reusable, SQL introduced views
--- Once created, a view has a name in the database schema so that other queries can use it like a table
--- Create a View
-CREATE VIEW v AS SELECT c1, c2		
-	FROM t ORDER BY c1 DESC;  
-  
--- Modify data thorugh views
-UPDATE v SET c2 = 9999
-	WHERE c1 = 'whatever'; 	
-	
--- Delete View
-DROP VIEW v; 	
+   (c2, c1, c3);			-- Reorder columns in the file to match the column order in the table	
 
 -- SELECT statement examples
 SELECT COUNT(DISTINCT c1) FROM t; 	-- When combined with COUNT, the NULL value will not be counted
@@ -222,4 +209,17 @@ INSERT INTO t
 VALUES  
   (1, 'Of', (SELECT t2_id 
                 FROM   t2 
-                WHERE  c1 = 'whatever'));															
+                WHERE  c1 = 'whatever'));															-- To make queries reusable, SQL introduced views
+
+-- To make queries reusable, SQL introduced views
+-- Once created, a view has a name in the database schema so that other queries can use it like a table
+-- Create a View
+CREATE VIEW v AS SELECT c1, c2		
+	FROM t ORDER BY c1 DESC;  
+  
+-- Modify data thorugh views
+UPDATE v SET c2 = 9999
+	WHERE c1 = 'whatever'; 	
+	
+-- Delete View
+DROP VIEW v; 	
