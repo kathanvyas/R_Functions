@@ -209,7 +209,7 @@ INSERT INTO t
 VALUES  
   (1, 'Of', (SELECT t2_id 
                 FROM   t2 
-                WHERE  c1 = 'whatever'));															-- To make queries reusable, SQL introduced views
+                WHERE  c1 = 'whatever'));
 
 -- To make queries reusable, SQL introduced views
 -- Once created, a view has a name in the database schema so that other queries can use it like a table
