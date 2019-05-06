@@ -118,7 +118,7 @@ INTO TABLE t
 -- SELECT statement examples
 SELECT COUNT(DISTINCT c1) FROM t; 	-- When combined with COUNT, the NULL value will not be counted
 SELECT * FROM t WHERE c1 = 'whatever'; 	-- Returns all records with the value "whatever"
-SELECT * FROM t WHERE c1 ='"whatever' 	-- Returns all records with the value "whatever" AND '9999"
+SELECT * FROM t WHERE c1 ='whatever' 	-- Returns all records with the value "whatever" AND '9999"
 	AND c2 = '9999'; 							
 SELECT * FROM t WHERE c1 LIKE 'what%'; 	-- Returns all records starting with the value "what"
 DELETE FROM t WHERE c1 = 'whatever'; 	-- Deletes rows with values matching "whatever" from the table
