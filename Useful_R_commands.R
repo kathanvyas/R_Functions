@@ -261,3 +261,6 @@ data[] <- lapply(data, gsub, pattern = " ", replacement = "", fixed = TRUE)
 
 # To to remove all spaces from all but the first column in a data frame
 data[-1] <- lapply(data[-1], gsub, pattern = " ", replacement = "", fixed = TRUE)
+
+# Convert datetime (factor) to time only
+format(as.POSIXct(strptime(as.character(df$c, '%d/%m/%Y %H:%M:%S'),"%d/%m/%Y %H:%M:%S",tz="")) ,format = "%H:%M")
