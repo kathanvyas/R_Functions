@@ -189,7 +189,7 @@ pnorm()                                # Returns the value of the probability de
 ppois()                                # Returns the value of the probability distribution function for the poisson distribution.
 predict()                              # Obtain predicted values from linear model.
 pf()                                   # Analogous to pnorm() and pt(), for F-distribution, inputs include F-test statistic and two values for degrees of freedom.
-prcomp(df)                             # Conducts principle component analysis.
+prcomp(df)                             # Conducts principle component analysis (dimensionality reduction).
 pt()                                   # Cumulative density function for Student's t -distribution, returns area under the curve to the left (or right) of specified value, similar to pnorm(), but for t -distribution.
 qbinom()                               # Returns the value of the probability quantile function for the binomial distribution.
 qpois()                                # Returns the value of the probability quantile function for the poisson distribution.
@@ -235,8 +235,6 @@ xyplot()                               # Lattice command for producing scatterpl
 df %>% expr                            # Passes an intermediate result onto the next function in a single statement, without needing variables to store the intermediate results. When describing it, you can think of it as a "THEN".
 df %$% expr                            # It "explodes" out the variables in a data frame so that you can refer to them explicitly. Used when you pass individual vectors, not a data frame and expressions to be evaluated in the context of that data frame.
 df %T>% expr                           # Works like %>% except that it returns the left-hand side instead of the right-hand side. useful when we are saving the final result of said commands back to a data frame, but also have some kind of ancillary function tacked on at the very end (i.e. plot()) that we don't want saved to the object.
-
-
 
 # A few favorite examples ~~~~~~~~~~~~~~~~~~~~~~~~
 
