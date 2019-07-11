@@ -129,6 +129,7 @@ tapply(obj, fn)                        # Breaks apart obj by factor and then app
 unlist(l)                              # Converts list l into a vector.
 vapply(obj, fn, fv)                    # A faster sapply, because you specify fv, which is an example of the desired output.
 varhandle::unfactor()                  # turn it into either numeric or character variables
+clusterSim::data.Normalize(X, type="", normalization = ) #normalizing. See Normalize.txt
 
 # Dates
 date()                                 # Returns today's date.  Does not accept arguments.
