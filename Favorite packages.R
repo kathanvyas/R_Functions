@@ -36,6 +36,7 @@ install.packages("stringr") # Consistent API for string processing, built on top
 install.packages("dataCompareR") # Compare two data frames and summarise the difference.
 install.packages("broom") # Convert statistical analysis objects into tidy data frames.
 install.packages("fuzzyjoin") # Join tables together on inexact matching.
+intall.package("ClusterSim") #Normalizing Data
 
 # To visualize data
 install.packages("ggplot2") # An implementation of the Grammar of Graphics.
